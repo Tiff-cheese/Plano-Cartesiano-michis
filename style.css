@@ -1,0 +1,219 @@
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #f7edff;
+    background: linear-gradient(135deg, #170d25, #32164b, #49216a);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ===== ENCABEZADO ===== */
+
+header {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 25px;
+}
+
+header h1 {
+    color: #e2c1ff;
+    font-size: clamp(24px, 5vw, 38px);
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px #a76cff;
+}
+
+header p {
+    color: #e4d4f5;
+    font-size: 16px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#menu,
+#juego {
+    width: 100%;
+    padding: 24px;
+    background: rgba(35, 17, 53, 0.96);
+    border: 2px solid #9e70d7;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(176, 117, 255, 0.2);
+}
+
+h2 {
+    color: #e2c1ff;
+    font-size: clamp(21px, 4vw, 28px);
+}
+
+#menu p,
+#juego p {
+    line-height: 1.6;
+}
+
+/* ===== BOTONES ===== */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#botonJugar,
+#botonVolver {
+    padding: 12px 22px;
+    margin: 12px 5px;
+    border: none;
+    border-radius: 12px;
+    color: #28143b;
+    background: #d6b2ff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#botonJugar:hover,
+#botonVolver:hover {
+    background: #f0dfff;
+    transform: scale(1.04);
+}
+
+/* ===== RETO Y MARCADOR ===== */
+
+#coordenada {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 10px 24px;
+    color: #291342;
+    background: #ffd875;
+    border-radius: 12px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+#mensaje {
+    min-height: 28px;
+    color: #e6caff;
+    font-weight: bold;
+}
+
+#marcador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+#marcador p {
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: #45235f;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ===== PLANO CARTESIANO ===== */
+
+/*
+   JavaScript controla las columnas, filas y casillas.
+   No agregar aquí display: flex ni grid-template-columns.
+*/
+
+#plano {
+    display: grid;
+    width: 100%;
+    max-width: 520px;
+    margin: 20px auto;
+    gap: 2px;
+    padding: 8px;
+    background: #2b1745;
+    border: 1px solid #9e70d7;
+    border-radius: 12px;
+    overflow: visible;
+}
+
+#plano button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #b78aff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #291342;
+    background: #f0dcff;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 1;
+    visibility: visible;
+}
+
+#plano button:hover {
+    filter: brightness(0.93);
+}
+
+#plano button:focus-visible {
+    outline: 2px solid #ffd875;
+    outline-offset: 1px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+
+footer {
+    margin: 24px auto 0;
+    color: #cbb3e6;
+    font-size: 13px;
+}
+
+/* ===== ADAPTACIÓN A CELULARES ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #menu,
+    #juego {
+        padding: 14px 8px;
+    }
+
+    #plano {
+        padding: 4px;
+        gap: 1px;
+    }
+
+    #plano button {
+        font-size: 10px;
+    }
+
+    #coordenada {
+        font-size: 26px;
+    }
+
+    #botonJugar,
+    #botonVolver {
+        font-size: 14px;
+        padding: 11px 16px;
+    }
+}

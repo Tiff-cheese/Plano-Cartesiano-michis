@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐾 Gatitos en el Plano Cartesiano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🐈‍⬛ Gatitos en el Plano Cartesiano</h1>
+        <p>¡Aprende coordenadas mientras rescatas gatitos!</p>
+    </header>
+
+    <main>
+
+        <!-- MENÚ PRINCIPAL -->
+        <section id="menu">
+            <h2>🐱 ¡Bienvenido, explorador!</h2>
+
+            <p>
+                ¡Encuentra el gatito correcto!
+            </p>
+
+            <button id="botonJugar" type="button">
+                🎮 ¡Jugar!
+            </button>
+        </section>
+
+        <!-- PANTALLA DEL JUEGO -->
+        <section id="juego" hidden>
+
+            <h2>🐾 Encuentra al gatito</h2>
+
+            <p>Busca la siguiente coordenada:</p>
+
+            <h3 id="coordenada">(2, 3)</h3>
+
+            <p id="mensaje" aria-live="polite">
+                ¡Haz clic en el punto correcto!
+            </p>
+
+            <div id="marcador">
+                <p>⭐ Puntos: <span id="puntos">0</span></p>
+                <p>🐱 Nivel: <span id="nivel">1</span></p>
+            </div>
+
+            <!-- AQUÍ SE DIBUJA EL PLANO CARTESIANO -->
+            <div id="plano"></div>
+
+            <button id="botonVolver" type="button">
+                🏠 Volver al menú
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🐾 Hecho con amor por los gatitos 💜</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <img src="meow.jpg" alt="meow" class="flotante">
+
+</body>
+</html>
